@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockSense</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📈 StockSense</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Live Data</a></li>
+        <li><a href="#">Prediction</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <section class="hero">
+    <h2>Smarter Stock Decisions</h2>
+    <p>Real-time analysis, predictions, and news alerts — all in one place.</p>
+    <button>Get Started</button>
+  </section>
+
+  <section class="stock-section">
+    <div class="stock-search">
+  <select id="market-select">
+    <option value="global" selected>🌐 Global</option>
+    <option value="india">🇮🇳 India (NSE/BSE)</option>
+  </select>
+  <input type="text" id="stock-input" placeholder="Search stock (e.g., Tesla, TCS, RELIANCE)" />
+  <button id="search-btn">Search</button>
+  <div class="suggestions" id="suggestions"></div>
+</div>
+
+    <div class="graph-section">
+      <canvas id="stockChart"></canvas>
+    </div>
+  </section>
+</main>
+
+
+  <footer>
+    <p>© 2025 StockSense. Powered by AWS Free Tier.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js" defer></script>
+
+
+</body>
+</html>
