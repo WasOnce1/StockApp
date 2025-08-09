@@ -6,7 +6,8 @@ pipeline {
         AWS_REGION     = 'ap-south-1' // Change to your AWS region
         ECR_REPO_NAME  = '879381246843.dkr.ecr.ap-south-1.amazonaws.com/my-app'
         IMAGE_TAG      = 'latest'
-        GITHUB_URL = 'https://WasOnce1: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@github.com/WasOnce1/StockApp.git'
+        GITHUB_URL     = 'https://github.com/WasOnce1/StockApp.git'
+        GITHUB_CRED_ID = 'Github-cred-id' // must match exactly in Jenkins credentials
         AWS_CRED_ID    = 'AWS-CRED-ID' // From Jenkins credentials
     }
 
