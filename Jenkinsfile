@@ -11,16 +11,15 @@ pipeline {
         AWS_CRED_ID    = 'AWS-CRED-ID' // From Jenkins credentials
     }
 
-    stages {
-        stage('Checkout from GitHub') {
-            steps {
-                git(
-                    branch: 'main',
-                    url: "${GITHUB_URL}",
-                    credentialsId: "${GITHUB_CRED_ID}"
-                )
-            }
-        }
+    stage('Checkout from GitHub') {
+    steps {
+        git(
+            branch: 'main',
+            url: "${GITHUB_URL}",
+            credentialsId: "${GITHUB_CRED_ID}"
+        )
+    }
+}
 
         stage('Login to AWS ECR') {
             steps {
