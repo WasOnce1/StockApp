@@ -11,7 +11,8 @@ pipeline {
         AWS_CRED_ID    = 'AWS-CRED-ID' // From Jenkins credentials
     }
 
-    stage('Checkout from GitHub') {
+    stages {
+        stage('Checkout from GitHub') {
     steps {
         git(
             branch: 'main',
