@@ -12,15 +12,15 @@ pipeline {
     }
 
     stages {
-    stage('Checkout from GitHub') {
-    steps {
-        git(
-            branch: 'main',
-            url: "${GITHUB_URL}",
-            credentialsId: "${GITHUB_CRED_ID}"
-        )
-    }
-
+        stage('Checkout from GitHub') {
+            steps {
+                git(
+                    branch: 'main',
+                    url: "${GITHUB_URL}",
+                    credentialsId: "${GITHUB_CRED_ID}"
+                )
+            }
+        }
 
         stage('Login to AWS ECR') {
             steps {
@@ -44,7 +44,6 @@ pipeline {
 
         stage('Security Scan') {
             steps {
-                // You can use Trivy or Docker scan here
                 sh """
                 docker scan ${ECR_REPO_NAME}:${IMAGE_TAG} || true
                 """
